@@ -1,0 +1,14 @@
+{%extends "taskapp/layouts.html"%}
+
+{%block body%}
+    
+    <h1>TASK MANAGER</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {%endfor%}
+    </ul>
+        
+    <a href="{% url 'taskapp:add_task' %}">ADD NEW TASK</a>
+
+{%endblock%}
